@@ -34,3 +34,13 @@ a {
 
 /* Flexbox Starts Here: */
 
+.elements {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+}
+.item {
+	flex: 0 1 calc(33.33% - 20px); /* 0 is flex grow setting setting it as 0 allows the last items to stay the same width as others instead of growing to the width of extra space */
+}
+
+
