@@ -55,31 +55,24 @@ a {
 }
 
 
-/* Flex Container!!! */
 .pricing-grid {
   max-width:750px;
   margin: 0 auto;
-  display:flex; 
-  align-items:center;
+	display:flex;
+align-items:center; /* each box is now sized to content, not standardized to each other. align center means aligned horizontally to center, so more content starts higher */
 }
-
 .plan {
-  background:rgba(255,255,255,0.2);
-  margin:20px;
-  padding:20px;
-  border-radius: 4px;
-  text-align: center;
-  
-  flex:1;
-  display:flex;
-  flex-wrap:wrap;
-
+	flex:1;
+	background: rgba(255,255,255,.2);
+	margin:1rem;
+	padding:1rem;
+	border-radius:4px;
+	display:flex; /* do this so the buttons align at the bottom of the box, align-self doesn't apply to grandchildren, only direct descendants */
+	flex-wrap:wrap;
 }
-
 .plan > * {
-  flex:1 1 100%;
+	flex: 1 1 100%; /* must have width */
 }
-
 .plan .cta {
-  align-self:flex-end;
-}
+	align-self:flex-end; /*align self is applied to a flex item, so .plan has to be a flex container */
+	}
